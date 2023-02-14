@@ -25,19 +25,29 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 ▪ [![pandas-shield](https://img.shields.io/badge/Pandas-FF7A00?&logo=pandas)
     ](https://pandas.pydata.org/)
 
+# Initial Questions
+* How Many of our Objects Are Inert?
 
+* Will Diameter play a Big Difference in Determining Hazard Status
 
-```python
-import foobar
+* Will Relative Velocity play a Big Difference in Determining Hazard Status
 
-# returns 'words'
-foobar.pluralize('word')
+* Will Absolute Magnitude play a Big Difference in Determining Hazard Status
 
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+# Data Dictionary
+```
+## :open_file_folder:   Data Dictionary
+**Variable** |    **Value**    | **Meaning**
+---|---|---
+*ID* | numerical | Unique Identifier for each Asteroid
+*Name* | string | Name given by NASA
+*est_diameter_min* | Float | Minimum Estimated Diameter in Kilometeres.
+*est_diameter_max* | Float | Maximum Estimated Diameter in Kilometeres.
+*relative_velocity* | Float | Velocity Relative to Earth
+*orbiting_body* | string | Earth
+*sentry_object* | False | Included in sentry - an automated collision monitoring system
+*absolute_magnitude* | Float | Describes intrinsic luminosity
+*Hazardous* | Boolean |  Feature that shows whether asteroid is harmful or not
 ```
 
 # Key Findings
