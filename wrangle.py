@@ -109,5 +109,29 @@ def split_data(df,strat):
     print (train.shape,test.shape,validate.shape)
     return train, validate, test
     
+# -x-and-y-----------------------------
+    
+def x_and_y(train,validate,test,target):
+    
+    """
+    splits train, validate, and target into x and y versions
+    """
+
+    x_train = train.drop(columns= target)
+    y_train = train[target]
+
+    x_validate = validate.drop(columns= target)
+    y_validate = validate[target]
+
+    x_test = test.drop(columns= target)
+    y_test = test[target]
+    
+    y_train = pd.DataFrame(y_train)
+    y_validate = pd.DataFrame(y_validate)
+    y_test = pd.DataFrame(y_test)
+
+
+
+    return x_train,y_train,x_validate,y_validate,x_test, y_test
     
     
