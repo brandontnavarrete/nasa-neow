@@ -126,6 +126,37 @@ def mag_stats(df):
             print('Reject Null Hypothesis (Significant difference between two samples)')
         else:
             print('Do not Reject Null Hypothesis (No significant difference between two samples)')
+
+# ---------------------------------------            
+            
+def plt_relv(df):
+    
+    sns.set_style('darkgrid')
+    sns.relplot(data = df, x = 'relative_velocity',y= 'hazardous',hue = "hazardous",palette = "ocean_r")
+    plt.title('Does Velocity tell us if an Asteroid is Hazardous')
+    plt.ylabel('Danger Status')
+    plt.xlabel('Velocity')
+    None
+
+
+def relv_stats(df):
+
+        haz = df[df.hazardous == True]
+        safe = df[df.hazardous == False]
+        
+        saf_min = safe.relative_velocity
+        haz_min = haz.relative_velocity
+        
+        # mannwhitneyu do the distribution of t test
+        t, p= mannwhitneyu(haz_min, saf_min)
+                           
+        print('Statistics=%.2f, p=%.2f' % (t, p))
+                           # conclusion
+        if p < a:
+            print('Reject Null Hypothesis (Significant difference between two samples)')
+        else:
+            print('Do not Reject Null Hypothesis (No significant difference between two samples)')
+
         
         
 # ---------------------------------------
