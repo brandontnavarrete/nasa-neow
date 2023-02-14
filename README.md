@@ -35,7 +35,7 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 * Will Absolute Magnitude play a Big Difference in Determining Hazard Status
 
 # Data Dictionary
-```
+
 ## :open_file_folder:   Data Dictionary
 **Variable** |    **Value**    | **Meaning**
 ---|---|---
@@ -48,7 +48,7 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 *sentry_object* | False | Included in sentry - an automated collision monitoring system
 *absolute_magnitude* | Float | Describes intrinsic luminosity
 *Hazardous* | Boolean |  Feature that shows whether asteroid is harmful or not
-```
+
 
 # Key Findings
 * About 10 % of data was classified as `hazardous`
