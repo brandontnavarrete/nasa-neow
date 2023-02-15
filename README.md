@@ -1,5 +1,5 @@
 # The Great Space Race to Save the Earth
-![Space/Users/brandonnavarrete/codeup-data-science/nasa-neow/local_image.png)
+![Space](/Users/brandonnavarrete/codeup-data-science/nasa-neow/local_image.png)
 
 A Near Earth Object Classification project by Brandon Navarrete
 
