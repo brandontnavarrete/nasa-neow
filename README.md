@@ -14,12 +14,12 @@ A Near Earth Object Classification project by Brandon Navarrete
 Humanity has forgotten how fragile we live. It would be wise to keep an eye to the stary abyss and determine if a near earth object has the potential to be hazardous.
 With world climate becoming ever changing, we have lost sight on protecting the one resource we all share. EARTH.
 
-* Here I will develop a model that can classify hazardous asteroids given their respective features of `diameter`, 'magnitude', and `velocity`
+* Here I will develop a model that can classify hazardous asteroids given their respective features of `diameter`, `magnitude`, and `velocity`
 
 * This will be encompassed in a report that is easy to read and interpret to any viewers.
 
 
-## Data Overview
+:world_map: ## Data Overview
 
 * This data was pulled from kaggle(2023) which has been pulled from NASA's API
 
@@ -51,16 +51,17 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 *Hazardous* | Boolean |  Feature that shows whether asteroid is harmful or not
 
 
-# Key Findings
+:medal_sports # Key Findings
 * About 10 % of data was classified as `hazardous`
 * All 3 features above shows promise in determing hazard status
+* The best performing model was the `XGboost` and was able to detect 98% of hazardous asteroids
 
 # Recommendation
 This model has a high percentage of finding the hazardous asteroids at the cost of a low accuracy, due to the false postitives
 
 * This model should be used UNTIL a better model is developed
 
-# Next Steps
+:electron: # Next Steps
 * Use the API to gather more relevant features, try to increase hazardous object capture rate.
 
 * Combine with image recogonition, try to automate process to have 24/7 observation / protection
