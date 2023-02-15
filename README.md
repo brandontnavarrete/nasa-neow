@@ -1,11 +1,11 @@
 # The Great Space Race to Save the Earth
 <a href="#"><img alt="Python" src="https://img.shields.io/badge/Python-013243.svg?logo=python&logoColor=blue"></a>
 <a href="#"><img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458.svg?logo=pandas&logoColor=white"></a>
-<a href="#"><img alt="NumPy" src="https://img.shields.io/badge/Numpy-2a4d69.svg?logo=numpy&logoColor=white"></a>
-<a href="#"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-8DF9C1.svg?logo=matplotlib&logoColor=white"></a>
+<a href="#"><img alt="NumPy" src="https://img.shields.io/badge/Numpy-2a4d69.svg?logo=numpy&logoColor=grey"></a>
+<a href="#"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-8DF9C1.svg?logo=matplotlib&logoColor=blue"></a>
 <a href="#"><img alt="seaborn" src="https://img.shields.io/badge/seaborn-65A9A8.svg?logo=pandas&logoColor=white"></a>
-<a href="#"><img alt="sklearn" src="https://img.shields.io/badge/sklearn-4b86b4.svg?logo=scikitlearn&logoColor=white"></a>
-<a href="#"><img alt="SciPy" src="https://img.shields.io/badge/SciPy-1560bd.svg?logo=scipy&logoColor=white"></a>
+<a href="#"><img alt="sklearn" src="https://img.shields.io/badge/sklearn-4b86b4.svg?logo=scikitlearn&logoColor=grey"></a>
+<a href="#"><img alt="SciPy" src="https://img.shields.io/badge/SciPy-1560bd.svg?logo=scipy&logoColor=blue"></a>
 ![Space](local_image.png)
 
 A Near Earth Object Classification project by Brandon Navarrete
@@ -25,14 +25,6 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 
 * 90836 rows, each it's own object or asteroids with 10 columns of its features
 
-# Dependencies 
-
-▪ [![python-shield](https://img.shields.io/badge/Python-864000?&logo=python&logoColor=white)
-    ](https://www.python.org/)
-▪ [![numpy-shield](https://img.shields.io/badge/Numpy-D44000?&logo=NumPy)
-    ](https://numpy.org/)
-▪ [![pandas-shield](https://img.shields.io/badge/Pandas-FF7A00?&logo=pandas)
-    ](https://pandas.pydata.org/)
 
 # Initial Questions
 * How Many of our Objects Are Inert?
