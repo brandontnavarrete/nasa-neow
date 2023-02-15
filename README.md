@@ -1,5 +1,6 @@
 # The Great Space Race to Save the Earth
-![Space!](/Users/brandonnavarrete/codeup-data-science/nasa-neow/Howdy_crisp_clear_image._point_of_view_on_the_moon_craters_pres_22c11894-b82a-4abb-964e-ca11550f3d91.png)
+![Space/Users/brandonnavarrete/codeup-data-science/nasa-neow/local_image.png)
+
 A Near Earth Object Classification project by Brandon Navarrete
 
 # Goal
