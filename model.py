@@ -1,3 +1,4 @@
+# imports
 import pandas as pd
 import numpy as np
 import os
@@ -45,6 +46,11 @@ a = .05
 
 def how_many(df):
     
+    '''
+    Input: dataframe
+    Output: Chart
+    Create separate dataframes based on target status and comparing their counts
+    '''
     # separating groups
     haz = df[df.hazardous == True]
     safe = df[df.hazardous == False]
@@ -53,7 +59,7 @@ def how_many(df):
     len(haz) / len(safe)
     
     sns.countplot(data = safe, x = 'hazardous',alpha = .5,label = 'safe',color = 'grey')
-    sns.countplot(data = haz, x = 'hazardous',label = 'hazardous',color = 'red')
+    sns.countplot(data = haz, x = 'hazardous',label = 'hazardous',color = 'skyblue')
     plt.title('10 % of the Objects are Dangerous')
     plt.xlabel('Safety Label')
     plt.ylabel('Frequency')
@@ -63,8 +69,16 @@ def how_many(df):
 # question 2 functions------------------
 
 def plt_diam(df):
+    '''
+    Input: dataframe
+    Output: plot
+    Creates a relplot and compares x and y with the hue set on "hazardous".
     
+    '''
+    # seaborn plot setting and titles
+    # set grid style
     sns.set_style('darkgrid')
+    # create relplot
     sns.relplot(data = df, x = 'est_diameter_max',y= 'hazardous',hue = "hazardous",palette = "ocean_r")
     plt.title('Does Diameter tell us if an Asteroid is Hazardous')
     plt.ylabel('Danger Status')
@@ -76,28 +90,36 @@ def plt_diam(df):
 
 
 def diam_stats(df):
-
-        haz = df[df.hazardous == True]
-        safe = df[df.hazardous == False]
+    haz = df[df.hazardous == True]
+    
+    
+    
+  
+        # creating separate groups
+    haz = df[df.hazardous == True]
+    safe = df[df.hazardous == False]
         
-        saf_min = safe.est_diameter_min
-        haz_min = haz.est_diameter_min
+        # creating series
+    saf_min = safe.est_diameter_min
+    haz_min = haz.est_diameter_min
         
         # mannwhitneyu do the distribution of t test
-        t, p= mannwhitneyu(haz_min, saf_min)
+    t, p= mannwhitneyu(haz_min, saf_min)
                            
-        print('Statistics=%.2f, p=%.2f' % (t, p))
+    print('Statistics=%.2f, p=%.2f' % (t, p))
                            # conclusion
-        if p < a:
-            print('Reject Null Hypothesis (Significant difference between two samples)')
-        else:
-            print('Do not Reject Null Hypothesis (No significant difference between two samples)')
+    if p < a:
+        print('Reject Null Hypothesis (Significant difference between two samples)')
+    else:
+        print('Do not Reject Null Hypothesis (No significant difference between two samples)')
                            
     
 # question 3 functions------------------
 
 def plt_mag(df):
     
+   
+    # seaborn plot setting and titles
     sns.set_style('darkgrid')
     sns.relplot(data = df, x = 'absolute_magnitude',y= 'hazardous',hue = "hazardous",palette = "ocean_r")
     plt.title('Does Magnitude tell us if an Asteroid is Hazardous')
@@ -110,27 +132,42 @@ def plt_mag(df):
 
 
 def mag_stats(df):
+    
 
-        haz = df[df.hazardous == True]
-        safe = df[df.hazardous == False]
+    # creating two groups 
+    haz = df[df.hazardous == True]
+    safe = df[df.hazardous == False]
         
-        saf_min = safe.absolute_magnitude
-        haz_min = haz.absolute_magnitude
-        
-        # mannwhitneyu do the distribution of t test
-        t, p= mannwhitneyu(haz_min, saf_min)
+
+        #creating a series
+    saf_min = safe.absolute_magnitude
+    
+    haz_min = haz.absolute_magnitude
+    
+
+    # mannwhitneyu do the distribution of t test
+    t, p= mannwhitneyu(haz_min, saf_min)
                            
-        print('Statistics=%.2f, p=%.2f' % (t, p))
-                           # conclusion
-        if p < a:
-            print('Reject Null Hypothesis (Significant difference between two samples)')
-        else:
-            print('Do not Reject Null Hypothesis (No significant difference between two samples)')
+    print('Statistics=%.2f, p=%.2f' % (t, p))
+
+    # conclusion
+    if p < a:
+        print('Reject Null Hypothesis (Significant difference between two samples)')
+    else:
+        print('Do not Reject Null Hypothesis (No significant difference between two samples)')
 
 # ---------------------------------------            
             
 def plt_relv(df):
     
+    '''
+    Input: dataframe
+    Output: plot
+    Creates a relplot and compares x and y with the hue set on "hazardous".
+    
+    '''
+    
+    # seaborn plot setting and titles
     sns.set_style('darkgrid')
     sns.relplot(data = df, x = 'relative_velocity',y= 'hazardous',hue = "hazardous",palette = "ocean_r")
     plt.title('Does Velocity tell us if an Asteroid is Hazardous')
@@ -140,22 +177,25 @@ def plt_relv(df):
 
 
 def relv_stats(df):
-
-        haz = df[df.hazardous == True]
-        safe = df[df.hazardous == False]
+    
+    
+    # create two groups
+    haz = df[df.hazardous == True]
+    safe = df[df.hazardous == False]
         
-        saf_min = safe.relative_velocity
-        haz_min = haz.relative_velocity
+    # create series
+    saf_min = safe.relative_velocity
+    haz_min = haz.relative_velocity
         
         # mannwhitneyu do the distribution of t test
-        t, p= mannwhitneyu(haz_min, saf_min)
+    t, p= mannwhitneyu(haz_min, saf_min)
                            
-        print('Statistics=%.2f, p=%.2f' % (t, p))
+    print('Statistics=%.2f, p=%.2f' % (t, p))
                            # conclusion
-        if p < a:
-            print('Reject Null Hypothesis (Significant difference between two samples)')
-        else:
-            print('Do not Reject Null Hypothesis (No significant difference between two samples)')
+    if p < a:
+        print('Reject Null Hypothesis (Significant difference between two samples)')
+    else:
+        print('Do not Reject Null Hypothesis (No significant difference between two samples)')
 
         
         
@@ -203,8 +243,11 @@ def baseline(y_train,y_validate,target):
 
 def add_dt_test(x_train, y_train, x_test, y_test, md,evals):
     
+    # create object instance
+
     clf = DecisionTreeClassifier(max_depth=md, random_state=42)
     
+    # fit
     clf.fit(x_train, y_train['hazardous'])
     
     # Accuracy and Recall for the test data
@@ -221,8 +264,10 @@ def add_dt_test(x_train, y_train, x_test, y_test, md,evals):
 
 def add_knn_test(x_train, y_train, x_validate, y_validate, x_test,y_test,evals):
 
+    # create object instance
      knn = KNeighborsClassifier(n_neighbors = 40, weights= 'distance' )
     
+    # fit
      knn.fit(x_train, y_train['hazardous'])
                                 
       # Accuracy and Recall for the test data
@@ -267,6 +312,11 @@ def add_xgboost(x_train, y_train, x_validate, y_validate, x_test,y_test,evals):
 
 def plot_conf( y_test,preds,y_train,baseline_preds):
     
+    '''
+    Input: series
+    Output: two confusion matrix
+    The will plot a confusion matrix, side by side for comparison.
+    '''
     fig, ax = plt.subplots(1,2)
     ax[0].set_title("XGBOOST Performance")
     ax[1].set_title("Baseline Performance")
