@@ -10,7 +10,7 @@
 
 A Near Earth Object Classification project by Brandon Navarrete
 
-:earth_americas:   # Goal
+  # :earth_americas: Goal
 
 Humanity has forgotten how fragile we live. It would be wise to keep an eye to the stary abyss and determine if a near earth object has the potential to be hazardous.
 With world climate becoming ever changing, we have lost sight on protecting the one resource we all share. EARTH.
@@ -20,7 +20,7 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 * This will be encompassed in a report that is easy to read and interpret to any viewers.
 
 
-:world_map: ## Data Overview
+## :world_map: Data Overview
 
 * This data was pulled from kaggle(2023) which has been pulled from NASA's API
 
@@ -85,8 +85,7 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 
 - **Droppeds**
      - `id`,`name`,`orbiting_body, `sentry` columns were dropped,no useful information.
-       
-    
+      
    
 <details>
 <summary> Data Splitting</summary>
@@ -120,7 +119,7 @@ With world climate becoming ever changing, we have lost sight on protecting the 
 
 
 
-:medal_sports # Key Findings
+# :medal_sports:  Key Findings
 * About 10 % of data was classified as `hazardous`
 * All 3 features above shows promise in determing hazard status
 * The best performing model was the `XGboost` and was able to detect 98% of hazardous asteroids
