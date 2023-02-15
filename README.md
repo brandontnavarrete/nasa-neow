@@ -10,7 +10,7 @@
 
 A Near Earth Object Classification project by Brandon Navarrete
 
-:earth_americas: # Goal
+:earth_americas:   # Goal
 
 Humanity has forgotten how fragile we live. It would be wise to keep an eye to the stary abyss and determine if a near earth object has the potential to be hazardous.
 With world climate becoming ever changing, we have lost sight on protecting the one resource we all share. EARTH.
